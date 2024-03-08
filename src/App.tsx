@@ -10,12 +10,12 @@ interface TeamProps {
   state: string;
 }
 
-// Component for the welcome message
+// function for the welcome message
 function WelcomeMessage() {
   return <h1>NCAA Basketball Teams</h1>;
 }
 
-// Component for displaying an individual team card
+// function for displaying an individual team card
 function IndividualTeamCard(props: TeamProps) {
   return (
     <div className="team-card-box">
@@ -29,7 +29,7 @@ function IndividualTeamCard(props: TeamProps) {
   );
 }
 
-// Component for displaying the list of teams
+// function for displaying the list of teams
 function TeamListContainer() {
   return (
     <div className="team-list">
