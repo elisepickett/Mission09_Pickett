@@ -1,5 +1,3 @@
-//Elise Pickett Mission 9 section 1
-
 import React from 'react';
 import './App.css';
 import teamsData from './CollegeBasketballTeams09.json';
@@ -13,12 +11,12 @@ interface TeamProps {
 }
 
 // Component for the welcome message
-function Welcome() {
+function WelcomeMessage() {
   return <h1>NCAA Basketball Teams</h1>;
 }
 
 // Component for displaying an individual team card
-function TeamCard(props: TeamProps) {
+function IndividualTeamCard(props: TeamProps) {
   return (
     <div className="team-card-box">
       <div className="team-card">
@@ -32,27 +30,25 @@ function TeamCard(props: TeamProps) {
 }
 
 // Component for displaying the list of teams
-function TeamList() {
+function TeamListContainer() {
   return (
     <div className="team-list">
-      {/* Map over the teams data and render a TeamCard component for each team */}
+      {/* Map over the teams data and render an IndividualTeamCard component for each team */}
       {teamsData.teams.map((team: TeamProps, index: number) => (
-        <TeamCard key={index} {...team} />
+        <IndividualTeamCard key={index} {...team} />
       ))}
     </div>
   );
 }
 
 // Main App component
-function App() {
+function Application() {
   return (
     <div className="App">
-      {/* Render the welcome message */}
-      <Welcome />
-      {/* Render the list of teams */}
-      <TeamList />
+      <WelcomeMessage />
+      <TeamListContainer />
     </div>
   );
 }
 
-export default App;
+export default Application;
